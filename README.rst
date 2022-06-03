@@ -5,6 +5,16 @@ This is an example of using Native namespace packages are described here:
 
 * https://packaging.python.org/en/latest/guides/packaging-namespace-packages/
 
+The documentation refers to a super simple example here:
+
+* https://github.com/pypa/sample-namespace-packages/tree/master/native
+
+The pypa example is great, because it is minimal, nothing to get confused
+about. When experimenting with namespace packages, and writing up the example
+in this repository, I had not seen the official Python Packaging Authority
+(pypa) example. I wish I did. However, at the example here does a bit more, i
+would recommend reating the pypa-example first then this one here.
+
 In this example the namespace is ``nspkgs``, two examples are provided
 implementing as described in the docs:
 
