@@ -5,4 +5,5 @@ setup(
     version="1.0.0",
     url="https://github.com/safl/nspkgs/",
     packages=find_namespace_packages(include=["nspkgs.*"]),
+    zip_safe=False,
 )
