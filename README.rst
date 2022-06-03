@@ -1,33 +1,41 @@
-Native namespace package example
-================================
+Python Packaging: native namespace package example
+==================================================
 
-This is an example of using Native namespace packages are described here:
+This is an example of Python packaging using **native namespace packages**,
+this method is one of the three methods for creating **namespace packages** as
+described here:
 
 * https://packaging.python.org/en/latest/guides/packaging-namespace-packages/
 
-The documentation refers to a super simple example here:
+The documentation refers to a **native namespace package** example here:
 
 * https://github.com/pypa/sample-namespace-packages/tree/master/native
 
-The pypa example is great, because it is minimal, nothing to get confused
-about. When experimenting with namespace packages, and writing up the example
-in this repository, I had not seen the official Python Packaging Authority
-(pypa) example. I wish I did. However, at the example here does a bit more, i
-would recommend reating the pypa-example first then this one here.
+The Python Packaging Authority (**pypa**) example is excellent, because it is
+minimal, nothing to get confused about.
 
-In this example the namespace is ``nspkgs``, two examples are provided
-implementing as described in the docs:
+When experimenting with namespace packages, and writing up the example in this
+repository, I had not seen the official **pypa** example. I wish I did.
+However, the example here does a bit more, i would recommend reading the
+**pypa** example first then this one here.
+
+In this example the namespace is ``nspkgs``, three package-examples are
+provided, start with these:
 
 * ``nspkgs-foo``
 * ``nspkgs-bar``
 
-So basically, with the "implicit" namespace packaging introduced in Python 3.3,
-it is just "do not add a ``__init__`` in ``nspkgs`` directory and use
-``find_namespace_packages()`` instead of ``find_packages()`` in ``setup.py``.
+The essence is, with the **implicit** namespace packaging introduced in Python
+3.3, it is just a matter of:
 
-Try installing them and running their associated ``example-bar.py`` and
-``example-foo.py``. This covers what it does. However, one can then take things
-a bit futher:
+* Do **not** add a ``__init__.py`` in the top-level namespace directory
+* Use ``find_namespace_packages()`` instead of ``find_packages()`` in
+  ``setup.py``.
+* Disable ``zip_safe``
+
+Try installing the package-examples and run their associated ``example-bar.py``
+and ``example-foo.py``. This covers what it does. However, one can then take
+things a bit futher:
 
 * Create a **core**/**common** package named ``nspkgs`` containing a subpackage
   with default implementation and common utilities. An example of that is
