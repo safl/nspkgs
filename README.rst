@@ -45,3 +45,7 @@ common functionality.
 This is example was crafted for the purpose of providing a skeleton for a
 namespace package providing a C-language binding packages, with distribution
 packages for ``ctypes`` and another for ``Cython``.
+
+**note:** In case you are using ``pytest`` discovery via packages, then take
+note that the "top-level" of the namespace cannot be searched, one has to
+specify the subpackages, e.g. ``python3 -m pytest --pyargs nspkgs.foo``
